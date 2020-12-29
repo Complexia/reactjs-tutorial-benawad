@@ -6,6 +6,8 @@ import express from 'express';
 import {ApolloServer} from 'apollo-server-express'
 import {buildSchema} from 'type-graphql'
 import { HelloResolver } from "./resolvers/hello";
+import { PostResolver } from "./resolvers/post";
+import "reflect-metadata";
 const main = async () => {
     
     //connect to db
@@ -13,13 +15,16 @@ const main = async () => {
     //run migrations
     await orm.getMigrator().up();
 
+    // const posts = await orm.em.find(Post, {});
+    // console.log(posts);
     const app = express();
 
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
-            resolvers: [HelloResolver],
-            validate: false
-        })
+            resolvers: [HelloResolver, PostResolver],
+            validate: false,
+        }),
+        context: () => ({ em: orm.em })
     })
     
 
