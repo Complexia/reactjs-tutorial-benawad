@@ -1,5 +1,5 @@
 Arguments: 
-  /home/remi/.nvm/versions/node/v14.15.0/bin/node /usr/local/bin/yarn add @types/express-session
+  /home/remi/.nvm/versions/node/v14.15.0/bin/node /usr/local/bin/yarn add -D @types/cors
 
 PATH: 
   /home/remi/.nvm/versions/node/v14.15.0/bin:/home/remi/.rbenv/plugins/ruby-build/bin:/home/remi/.rbenv/shims:/home/remi/.rbenv/bin:/home/remi/anaconda3/condabin:/home/remi/.local/bin:/home/remi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/remi/Desktop/reactlearn/libreddit/node_modules/@types/connect-redis/LICENSE'
+  Error: EACCES: permission denied, unlink '/home/remi/Desktop/reactlearn/libreddit/server/node_modules/@types/connect-redis/LICENSE'
 
 npm manifest: 
   {
@@ -53,8 +53,9 @@ npm manifest:
       "argon2": "^0.27.1",
       "class-validator": "^0.12.2",
       "connect-redis": "^5.0.0",
+      "cors": "^2.8.5",
       "express": "^4.17.1",
-      "express-session": "^1.17.0", 
+      "express-session": "^1.17.0",
       "graphql": "^15.4.0",
       "pg": "^8.5.1",
       "redis": "^3.0.2",
@@ -1273,7 +1274,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
     integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
   
-  cors@^2.8.4:
+  cors@^2.8.4, cors@^2.8.5:
     version "2.8.5"
     resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
     integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
@@ -1575,7 +1576,7 @@ Lockfile:
     dependencies:
       homedir-polyfill "^1.0.1"
   
-  express-session@^1.17.1:
+  express-session@^1.17.0:
     version "1.17.1"
     resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.17.1.tgz#36ecbc7034566d38c8509885c044d461c11bf357"
     integrity sha512-UbHwgqjxQZJiWRTMyhvWGvjBQduGCSBDhhZXYenziMFjxst5rMV+aJZ6hKPHZnPyHGsrqRICxtX8jtEbm/z36Q==
